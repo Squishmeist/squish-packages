@@ -1,15 +1,16 @@
 import { defineConfig } from "tsup";
 
 export default defineConfig({
-  entry: ["src/index.ts"],
-  format: ["cjs", "esm"],
+  entry: ["src/index.ts", "src/index.css"],
+  format: ["esm"],
+  dts: true,
   splitting: false,
   sourcemap: false,
-  clean: false,
+  clean: true,
   external: ["react", "react-dom"],
-  banner: {
-    js: "\"use client\";\nimport * as React from 'react';",
+  esbuildOptions(options) {
+    options.banner = {
+      js: '"use client"',
+    };
   },
-  target: "ES2022",
-  dts: true,
 });

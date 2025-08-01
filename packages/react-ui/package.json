@@ -6,14 +6,12 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
     },
     "./index.css": "./dist/index.css"
   },
@@ -37,6 +35,7 @@
     "@acme/tsconfig": "workspace:*",
     "@types/react": "catalog:react19",
     "eslint": "catalog:",
+    "postcss": "catalog:",
     "prettier": "catalog:",
     "tsup": "catalog:",
     "typescript": "catalog:"
