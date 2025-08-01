@@ -1,0 +1,15 @@
+{
+  "extends": "@acme/tsconfig/internal-package.json",
+  "compilerOptions": {
+    "lib": ["ES2022", "dom", "dom.iterable"],
+    "jsx": "react-jsx",
+    "outDir": "./dist",
+    "emitDeclarationOnly": false,
+    "noEmit": false,
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true
+  },
+  "include": ["src", ".storybook/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
